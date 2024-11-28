@@ -1,0 +1,172 @@
+/* Seção Hero */
+.hero {
+    position: relative;
+    height: 80vh; /* Altura da seção */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+    background-size: 400% 400%;
+    animation: gradientMove 10s infinite; /* Efeito gradiente em movimento */
+  }
+  
+  /* Animação para o movimento do gradiente */
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Partículas animadas */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Conteúdo do Hero */
+  .hero-content {
+    z-index: 2; /* Garante que o texto esteja acima das partículas */
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Título (h2) */
+  .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Parágrafo (p) */
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-out 0.3s forwards; /* Começa depois do título */
+  }
+  
+  /* Animação para aparecer o texto */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Botão com animação */
+  .hero-content button {
+    padding: 0.8rem 1.5rem;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #003366;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efeito de hover no botão */
+  .hero-content button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+  }
+  
+  /* Efeito de brilho no botão */
+  .hero-content button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: left 0.5s ease;
+  }
+  
+  .hero-content button:hover::before {
+    left: 100%;
+  }
+  
+  /* Responsividade: Ajuste do texto */
+  @media (max-width: 768px) {
+    .hero-content {
+      max-width: 90%;
+    }
+    
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .hero-content button {
+      font-size: 0.9rem;
+    }
+  }
+  .hero {
+  height: 80vh; /* Altura da seção */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+              url('https://www.portosdoparana.pr.gov.br/sites/portos/arquivos_restritos/files/imagem/2024-01/whatsapp-image-2024-01-29-at-18.08.49.jpg') no-repeat center center/cover;
+  /* A imagem de fundo é aplicada aqui */
+}
+
+.hero-content {
+  z-index: 2; /* Garante que o texto fique acima da imagem */
+  max-width: 600px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content button {
+  padding: 0.8rem 1.5rem;
+  background-color: #0f6caebb;
+  border: none;
+  border-radius: 5px;
+  color: #003366;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero-content button:hover {
+  transform: scale(1.1);
+}
